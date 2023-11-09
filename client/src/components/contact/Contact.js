@@ -21,7 +21,7 @@ const Contact = () => {
             </div>
             <div className="contact-info">
               <p className="tip">Call</p>
-              <p className="second-text">223546454</p>
+              <p className="second-text">987654321</p>
             </div>
             <button>Call Now</button>
           </div>
@@ -32,7 +32,7 @@ const Contact = () => {
             </div>
             <div className="contact-info">
               <p className="tip">Chat</p>
-              <p className="second-text">154454745</p>
+              <p className="second-text">639821548</p>
             </div>
             <button>Call Now</button>
           </div>
@@ -43,7 +43,7 @@ const Contact = () => {
             </div>
             <div className="contact-info">
               <p className="tip">Message</p>
-              <p className="second-text">84118951</p>
+              <p className="second-text">99966688774</p>
             </div>
             <button>Call Now</button>
           </div>
