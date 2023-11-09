@@ -1,0 +1,98 @@
+.whole-div {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: 200px;
+}
+.us {
+  color: #ec851a;
+  font-size: 3rem;
+}
+
+.info {
+  margin-left: 100px;
+}
+.contact-img {
+  height: 500px;
+  width: 500px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 30px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 180px;
+  width: 300px;
+  align-items: center;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+}
+.call .icon {
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  background-color: #eeeeff;
+  padding: 15px;
+  border-radius: 10px;
+  color: #4066ff;
+}
+
+.contact-info .tip {
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.contact-info .second-text {
+  margin-top: 10px;
+}
+.details button {
+  background-color: #eeeeff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  color: #4066ff;
+}
+.details button:hover {
+  background-color: #4066ff;
+  color: #eeeeff;
+}
+.contact-details .details:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.contact-details:hover > .details:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+.contact-details .details p.tip {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.contact-details .details p.second-text {
+  font-size: 1.2em;
+}
+@media screen and (max-width: 940px) {
+  .whole-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

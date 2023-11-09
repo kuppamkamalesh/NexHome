@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+.main {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  height: 100vh;
+  /* width: 100%; */
+  position: relative;
+  margin-bottom: 4rem;
+}
+.main::before {
+  content: "";
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent),
+    url("../../assests/img-2.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* background-image: linear-gradient(); */
+}
+.main .main-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 700px;
+  /* margin: auto; */
+  margin-left: 30px;
+}
+.main h1 {
+  font-family: "Open Sans";
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  animation: animateTop 1s ease forwards;
+}
+@keyframes animateTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.main-content strong {
+  color: #ec851a;
+}
+.custom-quote::before {
+  content: " “";
+  color: #ec851a;
+  font-size: 2em;
+}
+.custom-quote::after {
+  content: " ”";
+  color: #ec851a;
+  font-size: 2em;
+}
+.text {
+  font-family: "open+sans";
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  animation: animateLeft 4s ease forwards;
+}
+@keyframes animateLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.search {
+  display: flex;
+  background-color: #fff;
+  color: #333;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 8px;
+  animation: animateLeft 2s ease forwards;
+}
+.search input[type="text"] {
+  border: transparent;
+  background-color: transparent;
+  width: 400px;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+}
+.search input[type="text"]:focus {
+  outline: none;
+}
+.search label {
+  padding: 0 14px 0 8px;
+}
+.search .radio {
+  display: flex;
+  align-items: center;
+}
+.search button {
+  background-image: linear-gradient(45deg, #5651e5 0%, #709dff 100%);
+  border: 1px solid #5651e5;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media screen and (max-width: 940px) {
+  .main {
+    height: 70vh;
+  }
+  .main h1 {
+    font-size: 2.5rem;
+  }
+  .search input[type="text"] {
+    width: 100%;
+  }
+}

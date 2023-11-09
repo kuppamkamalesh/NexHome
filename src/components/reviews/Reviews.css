@@ -1,0 +1,66 @@
+.reviews .best {
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.reviews .latest {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+}
+.card-content {
+  width: 400px;
+  height: 300px;
+  background-color: #efefef;
+  padding: 30px;
+}
+.card-content:hover {
+  transform: scale(1.1);
+}
+.card-title {
+  font-size: 1.8rem;
+  margin-left: 20px;
+}
+.date {
+  margin-left: 20px;
+}
+.card-content .icon {
+  font-size: 1.5rem;
+  color: #f6bb06;
+}
+.review {
+  display: flex;
+}
+.review img {
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0;
+  margin-top: 10px;
+}
+.reviews {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 940px) {
+  .reviews .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .cards {
+    margin: 0;
+  }
+}
