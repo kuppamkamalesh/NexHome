@@ -61,7 +61,7 @@ const Contact = () => {
       </div>
       <div className="contact-img">
         <img
-          src="../../images/Apartment.jpg"
+          src="../../assests/contact-img.jpg"
           alt="img"
           className="contact-img"
         />
