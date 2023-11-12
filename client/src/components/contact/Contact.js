@@ -7,64 +7,54 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="whole-div" id="contact-us">
-      <div className="info">
-        <h2 className="us">Contact Us</h2>
-        <p>
-          Reach out to us, and let's create a conversation worth having. Your
-          thoughts, our passion, a perfect connection.
+    <div className="contact-container" id="contact-us">
+      <div className="contact-info">
+        <h2 className="contact-heading">Contact Us</h2>
+        <p className="contact-description">
+          Reach out to us, and let's create a conversation
         </p>
-        <div className="contact-details">
-          <div className="details">
-            <div className="call">
-              <FiPhoneCall className="icon" />
-            </div>
-            <div className="contact-info">
-              <p className="tip">Call</p>
-              <p className="second-text">987654321</p>
-            </div>
-            <button>Call Now</button>
-          </div>
-
-          <div className="details ">
-            <div className="call">
-              <RiMessage2Fill className="icon" />
-            </div>
-            <div className="contact-info">
-              <p className="tip">Chat</p>
-              <p className="second-text">639821548</p>
-            </div>
-            <button>Call Now</button>
-          </div>
-
-          <div className="details ">
-            <div className="call">
-              <PiChatTextBold className="icon" />
-            </div>
-            <div className="contact-info">
-              <p className="tip">Message</p>
-              <p className="second-text">99966688774</p>
-            </div>
-            <button>Call Now</button>
-          </div>
-          <div className="details ">
-            <div className="call">
-              <MdVideoChat className="icon" />
-            </div>
-            <div className="contact-info">
-              <p className="tip">Video Call</p>
-              <p className="second-text">8964556</p>
-            </div>
-            <button>Call Now</button>
-          </div>
-        </div>
       </div>
-      <div className="contact-img">
-        <img
-          src="../../assests/contact-img.jpg"
-          alt="img"
-          className="contact-img"
-        />
+      <div className="contact-cards">
+        <div className="contact-card">
+          <div className="contact-icon">
+            <FiPhoneCall />
+          </div>
+          <div className="contact-text">
+            <p className="contact-tip">Call</p>
+            <p className="contact-number">223546454</p>
+          </div>
+          <button className="contact-button">Call Now</button>
+        </div>
+        <div className="contact-card">
+          <div className="contact-icon">
+            <RiMessage2Fill />
+          </div>
+          <div className="contact-text">
+            <p className="contact-tip">Chat</p>
+            <p className="contact-number">154454745</p>
+          </div>
+          <button className="contact-button">Chat Now</button>
+        </div>
+        <div className="contact-card">
+          <div className="contact-icon">
+            <MdVideoChat />
+          </div>
+          <div className="contact-text">
+            <p className="contact-tip">Video Chat</p>
+            <p className="contact-number">987654321</p>
+          </div>
+          <button className="contact-button">Start Video Chat</button>
+        </div>
+        <div className="contact-card">
+          <div className="contact-icon">
+            <PiChatTextBold />
+          </div>
+          <div className="contact-text">
+            <p className="contact-tip">Message</p>
+            <p className="contact-number">987654321</p>
+          </div>
+          <button className="contact-button">Send your questions</button>
+        </div>
       </div>
     </div>
   );

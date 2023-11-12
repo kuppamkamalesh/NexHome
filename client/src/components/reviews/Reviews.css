@@ -1,66 +1,90 @@
-.reviews .best {
-  margin-top: 30px;
+.reviews {
   text-align: center;
-  letter-spacing: 1px;
+  padding: 40px;
 }
-.reviews .latest {
+
+.best {
+  font-size: 2.5em;
   margin-bottom: 20px;
-  font-size: 20px;
+  color: #ec851a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+}
+
+.latest {
+  font-family: "Open Sans";
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
   text-align: center;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
+
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:20px;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-left: 100px;
+  gap: 50px;
 }
+
+/* Card specific styles */
 .card-content {
-  width: 400px;
-  height: 300px;
-  background-color: #efefef;
-  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
 }
+
 .card-content:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
-.card-title {
-  font-size: 1.8rem;
-  margin-left: 20px;
-}
-.date {
-  margin-left: 20px;
-}
-.card-content .icon {
-  font-size: 1.5rem;
-  color: #f6bb06;
-}
+
 .review {
   display: flex;
-}
-.review img {
   align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  padding: 0px;
-  margin: 0;
-  margin-top: 10px;
+  margin-bottom: 15px;
 }
-.reviews {
-  margin-bottom: 100px;
+
+.customer-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
-@media screen and (max-width: 940px) {
-  .reviews .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  .cards {
-    margin: 0;
-  }
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star-icon {
+  color: #ffc107;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.card-para {
+  font-size: 1em;
+  line-height: 1.4;
 }
