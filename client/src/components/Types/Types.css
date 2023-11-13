@@ -1,64 +1,54 @@
+/* Types.css */
+
 .types {
-  background-color: #f7f9fc;
-  margin-top: 20px;
+  text-align: center;
+  margin: 20px;
+  background-color: #f4f6fb;
   padding: 20px;
 }
 
-.name {
-  font-size: 1rem;
-  margin-top: 10px;
-}
 .type {
-  color: #444;
-  letter-spacing: 1.5px;
-}
-.content {
-  color: #000000;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-.type,
-.content {
-  text-align: center;
-  margin-top: 10px;
-  font-family: "Open Sans";
-}
-.property-types {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
+  color: #2d3954;
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
-  margin-top: 20px;
+}
+
+.content {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.property-types {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .box {
-  display: block;
-  height: 200px;
   width: 200px;
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-family: "Open Sans";
-  border-radius: 10px;
-  margin-left: 50px;
+  margin: 10px;
+  padding: 10px;
   box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
-  border-radius: 6px;
-  padding: 30px;
-  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+  text-align: center;
 }
 
-img {
-  width: 65px;
-  height: 65px;
-  margin: auto;
+.box img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
 }
-@media screen and (max-width: 940px) {
-  .property-types {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.types {
-  transform: scale(1);
-  transition: transform 2s ease-in-out;
+
+label {
+  font-size: 14px;
+  color: #888;
 }
