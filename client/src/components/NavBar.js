@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { PiBuildingsLight } from "react-icons/pi";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { FaRegTimesCircle } from "react-icons/fa";
+import "../../src/App.css";
+
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -25,22 +27,27 @@ function NavBar() {
   return (
     <header className="nav-header">
       <nav className={`nav ${sticky ? "sticky" : ""}`}>
-        <h1 href="/" className="logo">
-          <PiBuildingsLight className="icon" />
-          Nex<strong>Home</strong>
-        </h1>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          {MenuItems.map((item, index) => (
-            <li key={index}>
-              <Link className={item.cName} to={item.url}>
-                {item.tittle}
-              </Link>
-            </li>
-          ))}
-          <a href="#contact-us">
-            <button className="nav-links">Contact us</button>
-          </a>
-        </ul>
+        <div>
+          <h2 href="/" className="logo">
+            <PiBuildingsLight/>
+            Nex
+            <strong>Home</strong>
+          </h2>
+        </div>
+        <div>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            {MenuItems.map((item, index) => (
+              <li key={index}>
+                <Link className={item.cName} to={item.url}>
+                  {item.tittle}
+                </Link>
+              </li>
+            ))}
+            <a href="#contact-us">
+              <button className="nav-links">Contact us</button>
+            </a>
+          </ul>
+        </div>
         <div className="hamburger" onClick={handleClick}>
           {click ? (
             <FaRegTimesCircle className="icon" />
@@ -50,7 +57,7 @@ function NavBar() {
         </div>
 
         <div className="btn">
-        <Link  to={"/login"}>
+          <Link to={"/login"}>
             <button className="login">Login/Register</button>
           </Link>
         </div>

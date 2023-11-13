@@ -14,14 +14,14 @@ const Footer = () => {
         <div>
           <h1 href="/" className="logo">
             <PiBuildingsLight className="icon" />
-            Nex<strong>Home</strong>
+            NexHome
           </h1>
           <p>
             Find a variety of properties that suit you very easilty Forget all
             difficulties in finding a residence for you
           </p>
         </div>
-        <div>
+        <div className="quick-links">
           <ul className="links">
             <p>Quick Links</p>
             <li className="link">
@@ -46,7 +46,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="quick-links">
           <ul className="links">
             <p>Support</p>
             <li className="list">
@@ -71,11 +71,11 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="social">
+        <div className="quick-links">
           <ul className="links">
             <p>Get In Touch</p>
             <li>
-              <a className="footer-links" href="#">
+              <a className="footer-links" href="/">
                 nexhome@house.com
               </a>
             </li>
