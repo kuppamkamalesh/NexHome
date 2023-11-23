@@ -76,11 +76,8 @@ const Best = () => {
           <div className="single" key={index}>
             <img src={item.img} alt="Property" />
             <div className="single-text">
-              <div className="tags">
+              <div>
                 <p className="tag">{item.tag}</p>
-                <i className="icon">
-                  <AiOutlineHeart />
-                </i>
               </div>
               <h4 className="property-name">{item.name}</h4>
               <p className="property-city">
@@ -101,6 +98,12 @@ const Best = () => {
                 <span className="currency-icon">₹</span>
                 {item.price}
               </label>
+              <div className="buyer-tag">
+                <button className="contact-button">Contact Agent</button>
+                <i className="icon">
+                  <AiOutlineHeart />
+                </i>
+              </div>
             </div>
           </div>
         ))}

@@ -85,22 +85,22 @@ const Footer = () => {
             <li>
               <ul className="social-list parent">
                 <li className="child child-1">
-                  <button className="button btn-1">
+                  <button className="button btn-instagram">
                     <CgInstagram />
                   </button>
                 </li>
                 <li className="child child-2">
-                  <button className="button btn-1">
+                  <button className="button btn-twitter">
                     <RiTwitterXLine />
                   </button>
                 </li>
                 <li className="child child-3">
-                  <button className="button btn-1">
+                  <button className="button btn-facebook">
                     <CgFacebook />
                   </button>
                 </li>
                 <li className="child child-4">
-                  <button className="button btn-1">
+                  <button className="button btn-brand">
                     <TbBrandThreads />
                   </button>
                 </li>

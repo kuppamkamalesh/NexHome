@@ -43,56 +43,56 @@
 .footer-links:hover {
   color: #fff;
 }
-
 .parent {
   display: flex;
-  justify-content: center;
+}
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
   align-items: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  font-size:1.5rem;
 }
 
 .child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
-  border-radius: 50%;
   margin: 0 5px;
 }
 
-.child:hover {
-  background-color: #fff;
-  background-position: -100px 100px, -100px 100px;
-  transform: rotate3d(0.5, 1, 0, 30deg);
-  transform: perspective(180px) rotateX(60deg) translateY(2px);
-  box-shadow: 0px 10px 10px rgb(1, 49, 182);
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  font-size: 25px;
-  cursor: pointer;
+.button {
+  border: 2px solid #000000;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg)
-    translateY(2px);
-  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
 }
-.footer .social-list ul {
-  padding-left: 0;
+
+.btn-instagram {
+  border-color: #e4405f;
+  background-color: #e4405f;
 }
-/********************************************************/
+
+.btn-twitter {
+  border-color: #1da1f2;
+  background-color: #1da1f2;
+}
+
+.btn-facebook {
+  border-color: #1877f2;
+  background-color: #1877f2;
+}
+
+.btn-brand {
+  border-color: #ff6d00;
+  background-color: #ff6d00;
+}
+
 @media screen and (max-width: 768px) {
   .footer .container {
     grid-template-columns: 1fr;
@@ -103,7 +103,4 @@ button {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-}
-.parent {
-  display: flex;
 }

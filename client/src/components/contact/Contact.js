@@ -1,7 +1,6 @@
 import React from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { RiMessage2Fill } from "react-icons/ri";
-import { MdVideoChat } from "react-icons/md";
 import { PiChatTextBold } from "react-icons/pi";
 import "./Contact.css";
 
@@ -34,16 +33,6 @@ const Contact = () => {
             <p className="contact-number">154454745</p>
           </div>
           <button className="contact-button">Chat Now</button>
-        </div>
-        <div className="contact-card">
-          <div className="contact-icon">
-            <MdVideoChat />
-          </div>
-          <div className="contact-text">
-            <p className="contact-tip">Video Chat</p>
-            <p className="contact-number">987654321</p>
-          </div>
-          <button className="contact-button">Start Video Chat</button>
         </div>
         <div className="contact-card">
           <div className="contact-icon">

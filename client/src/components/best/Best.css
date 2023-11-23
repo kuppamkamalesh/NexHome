@@ -29,11 +29,13 @@
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
   overflow: hidden;
   position: relative;
 }
-
+.single:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 20px;
+}
 .single img {
   width: 100%;
   height: 200px;
@@ -50,20 +52,15 @@
   padding: 10px;
 }
 
-.tags {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
 .tag {
+  display: inline-block;
   font-size: 14px;
   font-weight: bold;
   background-color: #20c997;
   color: #fff;
   padding: 5px 10px;
   border-radius: 20px;
+  margin-top: 10px;
 }
 
 .icon {
@@ -95,18 +92,32 @@
   align-items: center;
   margin-right: 10px;
 }
-
-.icon {
-  font-size: 20px;
+.buyer-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buyer-tag .icon {
+  font-size: 25px;
   margin-right: 5px;
   cursor: pointer;
+  padding-top: 30px;
+  text-align: center;
+  margin-right: 20px;
 }
-
+.buyer-tag .icon:hover {
+  transform: scale(1.1);
+  color: red;
+}
 .price {
+  display: block;
   font-size: 18px;
   font-weight: bold;
   color: #007bff;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #007bff;
 }
+
 @media screen and (max-width: 940px) {
   .apartments {
     display: flex;
