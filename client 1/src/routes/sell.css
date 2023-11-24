@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.seller h1 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: orange;
+  text-align: center;
+  margin: 10px;
+}
+.radio-inputs {
+  margin-bottom: 20px;
+}
+
+.radio-inputs label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.radio_input {
+  display: none;
+}
+
+.radio_input + span {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 2px solid #3498db;
+  border-radius: 20px;
+  color: #3498db;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.radio_input:checked + span {
+  background-color: #3498db;
+  color: #fff;
+}
+.about-property,
+.house-details,
+.contact-details,
+.house-pics {
+  background-color: #1992e3;
+  /* background-color: #ccc; */
+  display: grid;
+  grid-template-columns: 0.6fr 0.6fr;
+  margin: 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+.about-property div label,
+.house-details div label,
+.contact-details div label,
+.house-pics div label {
+  color: white;
+}
+
+.house-details .city-location {
+  margin-left: 10px;
+}
+.about-property img,
+.house-details img,
+.contact-details img,
+.house-pics img {
+  width: 600px;
+  height: auto;
+  padding: 20px;
+}
+.city-location {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.contact-details,
+.city-location {
+  background-color: #1992e3;
+  /* background-color: #ccc; */
+}
+
+.contact-details label,
+.city-location label {
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: labelFade 0.3s ease-in-out forwards;
+}
+
+.contact-details input,
+.city-location input {
+  width: 500px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact-details input:focus,
+.city-location:focus {
+  border-color: #333;
+}
+@keyframes labelFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.house-pics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.photos h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.photos label {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.photos input {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.information label {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.information textarea {
+  width: 400px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/*************************************/
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login-button button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 40px;
+  background-color: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.done {
+  padding: 2px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 40px;
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.done:hover {
+  background-color: yellowgreen;
+}
+
+.login-button button:hover {
+  background-color: #0c50a2;
+}
+
+/* .seller {
+  background-color: #faf9e3;
+  background-color: #f5f5f5;
+} */

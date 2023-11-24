@@ -1,0 +1,90 @@
+.reviews {
+  text-align: center;
+  padding: 40px;
+}
+
+.best {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ec851a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Open Sans";
+}
+
+.latest {
+  font-family: "Open Sans";
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* Card specific styles */
+.card-content {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card-content:hover {
+  transform: translateY(-5px);
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.customer-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star-icon {
+  color: #ffc107;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.card-para {
+  font-size: 1em;
+  line-height: 1.4;
+}

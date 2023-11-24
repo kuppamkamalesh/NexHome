@@ -1,0 +1,54 @@
+/* Types.css */
+
+.types {
+  text-align: center;
+  margin: 20px;
+  background-color: #f4f6fb;
+  padding: 20px;
+}
+
+.type {
+  color: #2d3954;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.property-types {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+  border: 1px solid #ccc;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.box img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+label {
+  font-size: 14px;
+  color: #888;
+}

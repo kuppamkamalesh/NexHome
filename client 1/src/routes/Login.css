@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login-signup {
+  padding-top: 100px;
+}
+.Login-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form {
+  width: 500px;
+  padding: 25px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #0099ff;
+}
+
+.login-form button[type="button"],
+.sign-form button[type="button"] {
+  padding: 10px;
+  background-color: #0099ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.login-form button[type="button"]:hover,
+.sign-form button[type="button"]:hover {
+  background-color: #0077cc;
+}
+
+.login-page-img {
+  width: 600px;
+  height: 450px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.signup-page-img {
+  width: 650px;
+  height: 545px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.sign-form {
+  width: 500px;
+  padding: 25px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.sign-form input[type="email"],
+.sign-form input[type="password"],
+.sign-form input[type="text"],
+.sign-form input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.sign-form input[type="email"]:focus,
+.sign-form input[type="password"]:focus,
+.sign-form input[type="text"]:focus,
+.sign-form input[type="tel"]:focus {
+  border-color: #0099ff;
+}
