@@ -174,29 +174,32 @@ function Buy() {
               />
             </div>
             <div className="input-group">
+              <label>Type of Purchase</label>
               <div>
-                <label>All</label>
-                <input
-                  type="checkbox"
-                  checked={propertyType === "all"}
-                  onChange={() => setPropertyType("all")}
-                />
-              </div>
-              <div>
-                <label>Buy</label>
-                <input
-                  type="checkbox"
-                  checked={propertyType === "Sell"}
-                  onChange={() => setPropertyType("Sell")}
-                />
-              </div>
-              <div>
-                <label>Rent</label>
-                <input
-                  type="checkbox"
-                  checked={propertyType === "Rent"}
-                  onChange={() => setPropertyType("Rent")}
-                />
+                <div>
+                  <label>All</label>
+                  <input
+                    type="checkbox"
+                    checked={propertyType === "all"}
+                    onChange={() => setPropertyType("all")}
+                  />
+                </div>
+                <div>
+                  <label>Buy</label>
+                  <input
+                    type="checkbox"
+                    checked={propertyType === "Sell"}
+                    onChange={() => setPropertyType("Sell")}
+                  />
+                </div>
+                <div>
+                  <label>Rent</label>
+                  <input
+                    type="checkbox"
+                    checked={propertyType === "Rent"}
+                    onChange={() => setPropertyType("Rent")}
+                  />
+                </div>
               </div>
             </div>
             <div className="input-group">
