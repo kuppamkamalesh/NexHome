@@ -1,19 +1,23 @@
 {
-  "name": "server",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Server for Project",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "nodemon index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "env": "^0.0.2",
     "express": "^4.18.2",
-    "mongoose": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.9.1",
     "nodemon": "^3.0.1"
   }
 }

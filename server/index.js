@@ -1,30 +1,35 @@
-import express from "express";
-import mongoose from "mongoose";
-//import dotenv from 'dotenv';
-//dotenv.config();
-//process.env.MONGO
-//MONGO = "mongodb+srv://harshsangrulkar:1234@cluster0.8ptiwxj.mongodb.net/?retryWrites=true&w=majority"
-import userRouter from "./routes/user.route.js";
-import authRouter from "./routes/auth.route.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const nexHomeRouter = require("./Controller/router");
+const sellRouter = require("./Controller/router2");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
-mongoose
-  .connect(
-    "mongodb+srv://harshsangrulkar:1234@cluster0.8ptiwxj.mongodb.net/?retryWrites=true&w=majority"
-  )
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+mongoose.set("strictQuery", true);
+mongoose.connect(
+  // "mongodb+srv://harshsangrulkar:1234@cluster0.8ptiwxj.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://purnasaikrishnainnamuri23:12345@cluster0.q5cu4tp.mongodb.net/NexHome?retryWrites=true&w=majority"
+);
 
-const app = express();
-app.use(express.json());
+var db = mongoose.connection;
 
-app.listen(4000, () => {
-  console.log("Server running on port 4000");
+db.on("open", () => {
+  console.log("Connected to DB");
+});
+db.on("error", () => {
+  console.log("error occured");
 });
 
-app.use("/server/user", userRouter);
+const app = express();
 
-app.use("/server/auth", authRouter);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use(cookieParser());
+app.use("/nexHome", nexHomeRouter);
+app.use("/sell", sellRouter);
+
+app.listen(4000, () => {
+  console.log("started at 4000");
+});
