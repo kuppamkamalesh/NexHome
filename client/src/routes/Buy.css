@@ -1,0 +1,43 @@
+.properties-container {
+  display: flex;
+  padding-top: 100px;
+}
+
+.sidebar {
+  width: 24%;
+  padding: 20px;
+  background-color: #f0f0f0; /* Set your desired background color */
+}
+
+.input-group {
+  display: flex;
+  padding: 8px;
+}
+
+.input-group div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.input-group label {
+  margin-right: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.property-list {
+  width: 76%;
+}

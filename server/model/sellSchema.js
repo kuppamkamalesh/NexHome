@@ -14,6 +14,7 @@ const sellSchema = new mongoose.Schema(
     cost: { type: Number, required: true },
     info: { type: String, required: true },
   },
+  { timestamps: true },
   {
     collection: "Sell-propertyList",
   }
