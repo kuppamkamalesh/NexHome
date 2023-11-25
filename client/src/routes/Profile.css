@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .profile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  
+  .profile-user-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #164564;
+  }
+  .profile-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 50px;
+  }
+  .edit-button,
+  .delete-button {
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .edit-button {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .edit-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  

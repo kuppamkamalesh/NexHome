@@ -30,9 +30,11 @@
 //       .then((res) => {
 //         if (res.data === "User already exixts") {
 //           // alert("User already exixts please try another email");
-//           document.getElementById(
-//             "Alert"
-//           ).innerHTML = `<p class="alert alert-danger">User already exixts please try another email</p>`;
+//           document.getElementById("Alert").innerHTML = (
+//             <p class="alert alert-danger">
+//               User already exixts please try another email
+//             </p>
+//           );
 //         } else if (res.status === 200) {
 //           // alert("Successful");
 //           navigate("/login");
@@ -48,76 +50,85 @@
 //   return (
 //     <div className="body" style={{ paddingTop: "100px" }}>
 //       <NavBar />
-//       <div className="container">
-//         <form id="signupForm">
-//           <h2>Signup</h2>
-//           <div id="Alert"></div>
-//           <label for="name">Name:</label>
-//           <br />
-//           <input
-//             onChange={(e) => {
-//               setName(e.target.value);
-//             }}
-//             type="text"
-//             id="name"
-//             name="name"
-//             required
+//       <div className="Login-page">
+//         <div>
+//           <img
+//             src="../../Images/signup-img.jpg"
+//             alt="signup"
+//             className="signup-page-img"
 //           />
-//           <label for="email">Email:</label>
-//           <br></br>
-//           <input
-//             onChange={(e) => {
-//               setEmail(e.target.value);
-//             }}
-//             type="email"
-//             id="email"
-//             name="email"
-//             required
-//             // oninput="displayEmailError(false)"
-//           />
-//           <div id="emailError" className="error-message"></div>
-//           <label for="password">Password:</label>
-//           <br></br>
-//           <input
-//             onChange={(e) => {
-//               setPassword(e.target.value);
-//             }}
-//             type="password"
-//             id="password"
-//             name="password"
-//             required
-//           />
+//         </div>
+//         <div className="sign-form">
+//           <form id="signupForm">
+//             <h2>Signup</h2>
+//             <div id="Alert"></div>
+//             <label for="name">Name:</label>
+//             <br />
+//             <input
+//               onChange={(e) => {
+//                 setName(e.target.value);
+//               }}
+//               type="text"
+//               id="name"
+//               name="name"
+//               required
+//             />
+//             <label for="email">Email:</label>
+//             <br></br>
+//             <input
+//               onChange={(e) => {
+//                 setEmail(e.target.value);
+//               }}
+//               type="email"
+//               id="email"
+//               name="email"
+//               required
+//               // oninput="displayEmailError(false)"
+//             />
+//             <div id="emailError" className="error-message"></div>
+//             <label for="password">Password:</label>
+//             <br></br>
+//             <input
+//               onChange={(e) => {
+//                 setPassword(e.target.value);
+//               }}
+//               type="password"
+//               id="password"
+//               name="password"
+//               required
+//             />
 
-//           <label for="phone">Phone Number:</label>
-//           <br></br>
-//           <input
-//             onChange={(e) => {
-//               setPhonenumber(e.target.value);
-//             }}
-//             type="tel"
-//             id="phone"
-//             name="phone"
-//             required
-//           />
-//           <br></br>
+//             <label for="phone">Phone Number:</label>
+//             <br></br>
+//             <input
+//               onChange={(e) => {
+//                 setPhonenumber(e.target.value);
+//               }}
+//               type="tel"
+//               id="phone"
+//               name="phone"
+//               required
+//             />
+//             <br></br>
 
-//           <button
-//             onClick={() => {
-//               console.log(arr);
-//               handelClick();
-//             }}
-//             type="button"
-//             className="btn btn-success"
-//           >
-//             Signup
-//           </button>
-//           <p>
-//             Have an account?{" "}
-//             <Link style={{ color: "#007bff" }} to="/login">
-//               Login
-//             </Link>{" "}
-//           </p>
-//         </form>
+//             <button
+//               onClick={() => {
+//                 console.log(arr);
+//                 handelClick();
+//               }}
+//               type="button"
+//               className="btn btn-success"
+//             >
+//               Signup
+//             </button>
+//             <p>
+//               Have an account?{" "}
+//               <Link style={{ color: "#007bff" }} to="/login">
+//                 Login
+//               </Link>{" "}
+//             </p>
+//           </form>
+//         </div>
 //       </div>
 //     </div>
 //   );
@@ -125,7 +136,6 @@
 
 // export default Signup;
 
-//kamlaesh
 
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
@@ -159,11 +169,9 @@ function Signup() {
       .then((res) => {
         if (res.data === "User already exixts") {
           // alert("User already exixts please try another email");
-          document.getElementById("Alert").innerHTML = (
-            <p class="alert alert-danger">
-              User already exixts please try another email
-            </p>
-          );
+          document.getElementById(
+            "Alert"
+          ).innerHTML = <p class="alert alert-danger">User already exixts please try another email</p>;
         } else if (res.status === 200) {
           // alert("Successful");
           navigate("/login");

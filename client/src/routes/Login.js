@@ -37,9 +37,9 @@
 //           navigate("/");
 //         } else {
 //           dispatch(signInFailure(result.data.msg));
-//           document.getElementById(
-//             "Alert"
-//           ).innerHTML = `<p class="alert alert-danger">${result.data.msg}</p>`;
+//           document.getElementById("Alert").innerHTML = (
+//             <p class="alert alert-danger">${result.data.msg}</p>
+//           );
 //         }
 //       })
 //       .catch((error) => {
@@ -51,60 +51,67 @@
 //   return (
 //     <div className="body" style={{ paddingTop: "100px" }}>
 //       <NavBar />
-//       <div className="container">
-//         <form id="loginForm">
-//           <h2>Login</h2>
-//           <div id="Alert"></div>
-//           <label for="email">Email:</label>
-//           <br />
-//           <input
-//             onChange={(e) => {
-//               setEmail(e.target.value);
-//             }}
-//             type="email"
-//             id="email"
-//             name="email"
-//             required
+//       <div className="Login-page">
+//         <div className="login-form">
+//           <form id="loginForm">
+//             <h2>Login</h2>
+//             <div id="Alert"></div>
+//             <label for="email">Email:</label>
+//             <br />
+//             <input
+//               onChange={(e) => {
+//                 setEmail(e.target.value);
+//               }}
+//               type="email"
+//               id="email"
+//               name="email"
+//               required
+//             />
+//             <div id="emailError" className="error-message"></div>
+//             <label for="password">Password:</label>
+//             <br />
+//             <input
+//               onChange={(e) => {
+//                 setPassword(e.target.value);
+//               }}
+//               type="password"
+//               id="password"
+//               name="password"
+//               required
+//             />
+//             <br />
+//             <button
+//               onClick={() => {
+//                 console.log(array);
+//                 handelClick();
+//               }}
+//               type="button"
+//               className="btn btn-success"
+//             >
+//               Login
+//             </button>
+//             <br />
+//             <p>
+//               Don't have an account?{" "}
+//               <Link style={{ color: "#007bff" }} to={"/Signup"}>
+//                 Signup
+//               </Link>
+//             </p>
+//           </form>
+//         </div>
+//         <div>
+//           <img
+//             src="../../Images/login-img.jpg"
+//             alt="login-page-img"
+//             className="login-page-img"
 //           />
-//           <div id="emailError" className="error-message"></div>
-//           <label for="password">Password:</label>
-//           <br />
-//           <input
-//             onChange={(e) => {
-//               setPassword(e.target.value);
-//             }}
-//             type="password"
-//             id="password"
-//             name="password"
-//             required
-//           />
-//           <br />
-//           <button
-//             onClick={() => {
-//               console.log(array);
-//               handelClick();
-//             }}
-//             type="button"
-//             className="btn btn-success"
-//           >
-//             Login
-//           </button>
-//           <br />
-//           <p>
-//             Don't have an account?{" "}
-//             <Link style={{ color: "#007bff" }} to={"/Signup"}>
-//               Signup
-//             </Link>
-//           </p>
-//         </form>
+//         </div>
 //       </div>
 //     </div>
 //   );
 // }
 
 // export default Login;
-
-//kamalesh
 
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
@@ -130,6 +137,32 @@ function Login() {
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
+  // function handelClick() {
+  //   console.log("Button Clicked");
+  //   dispatch(signInStart());
+
+  //   Axios.post("http://localhost:4000/nexHome/login", {
+  //     email,
+  //     password,
+  //   })
+  //     .then((result) => {
+  //       console.log(result);
+  //       if (result.data.msg === "Sucess") {
+  //         dispatch(signInSuccess(result.data.userData));
+  //         navigate("/");
+  //       } else {
+  //         dispatch(signInFailure(result.data.msg));
+  //         document.getElementById("Alert").innerHTML = (
+  //           <p class="alert alert-danger">${result.data.msg}</p>
+  //         );
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       dispatch(signInFailure(error.message));
+  //       console.log(error);
+  //     });
+  // }
+
   function handelClick() {
     console.log("Button Clicked");
     dispatch(signInStart());
@@ -145,9 +178,9 @@ function Login() {
           navigate("/");
         } else {
           dispatch(signInFailure(result.data.msg));
-          document.getElementById("Alert").innerHTML = (
-            <p class="alert alert-danger">${result.data.msg}</p>
-          );
+          document.getElementById(
+            "Alert"
+          ).innerHTML = <p class="alert alert-danger">${result.data.msg}</p>;
         }
       })
       .catch((error) => {
@@ -155,7 +188,6 @@ function Login() {
         console.log(error);
       });
   }
-
   return (
     <div className="body" style={{ paddingTop: "100px" }}>
       <NavBar />
