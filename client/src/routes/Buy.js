@@ -12,6 +12,7 @@ function Buy() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("created_at_desc");
   const [propertyType, setPropertyType] = useState("all");
+  const [houseType, setHouseType] = useState("all");
   const [filteredArr, setFilteredArr] = useState([]);
 
   const [clientInfo, setClientInfo] = useState({
@@ -28,6 +29,7 @@ function Buy() {
     // Set default values if there are no stored filters
     setSearchTerm(storedFilters.searchTerm || "");
     setPropertyType(storedFilters.propertyType || "all");
+    setHouseType(storedFilters.houseType || "all");
     setSortBy(storedFilters.sortBy || "created_at_desc");
 
     // Fetch data on component mount and set the state
@@ -61,6 +63,7 @@ function Buy() {
     if (!Object.keys(storedFilters).length) {
       setSearchTerm("");
       setPropertyType("all");
+      setHouseType("all");
       setSortBy("created_at_desc");
 
       Axios.get("http://localhost:4000/sell/")
@@ -115,7 +118,11 @@ function Buy() {
     e.preventDefault();
 
     // Filter the data based on the current filters
-    const filteredData = applyFilters(arr, { searchTerm, propertyType });
+    const filteredData = applyFilters(arr, {
+      searchTerm,
+      propertyType,
+      houseType,
+    });
 
     // Sort the data
     const sortedData = sortData(filteredData, sortBy);
@@ -127,35 +134,10 @@ function Buy() {
     const filtersToSave = {
       searchTerm,
       propertyType,
+      houseType,
       sortBy,
     };
     localStorage.setItem("buyFilters", JSON.stringify(filtersToSave));
-  };
-
-  const handleResetFilters = () => {
-    // Reset filters to default values
-    setSearchTerm("");
-    setPropertyType("all");
-    setSortBy("created_at_desc");
-
-    // Fetch data again and reset filteredArr
-    Axios.get("http://localhost:4000/sell/")
-      .then((res) => {
-        if (res.status === 200) {
-          const data = res.data;
-          const sortedData = sortData(data, sortBy);
-          setArr(sortedData);
-          const shuffledData = [...sortedData].sort(() => Math.random() - 0.5);
-          setShuffledArr(shuffledData);
-          setFilteredArr(sortedData);
-        } else {
-          Promise.reject();
-        }
-      })
-      .catch((err) => alert(err));
-
-    // Remove filter state from local storage
-    localStorage.removeItem("buyFilters");
   };
 
   const map = () => {
@@ -199,6 +181,44 @@ function Buy() {
                     checked={propertyType === "Rent"}
                     onChange={() => setPropertyType("Rent")}
                   />
+                </div>
+              </div>
+
+              <div className="input-group">
+                <label>Type of Property</label>
+                <div>
+                  <div>
+                    <label>All</label>
+                    <input
+                      type="checkbox"
+                      checked={houseType === "all"}
+                      onChange={() => setHouseType("all")}
+                    />
+                  </div>
+                  <div>
+                    <label>Flat</label>
+                    <input
+                      type="checkbox"
+                      checked={houseType === "Flat"}
+                      onChange={() => setHouseType("Flat")}
+                    />
+                  </div>
+                  <div>
+                    <label>Home</label>
+                    <input
+                      type="checkbox"
+                      checked={houseType === "House"}
+                      onChange={() => setHouseType("House")}
+                    />
+                  </div>
+                  <div>
+                    <label>Shop</label>
+                    <input
+                      type="checkbox"
+                      checked={houseType === "Shop"}
+                      onChange={() => setHouseType("Shop")}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -349,11 +369,18 @@ function sortData(data, sortBy) {
 }
 
 function applyFilters(data, filters) {
-  const { searchTerm, propertyType } = filters;
-  return data.filter(
-    (item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+  const { searchTerm, propertyType, houseType } = filters;
+  return data.filter((item) => {
+    const itemName = item.name || "";
+    const itemType = item.to || "";
+    const itemHouseType = item.Type || "";
+
+    return (
+      itemName.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (propertyType === "all" ||
-        item.to.toLowerCase() === propertyType.toLowerCase())
-  );
+        itemType.toLowerCase() === propertyType.toLowerCase()) &&
+      (houseType === "all" ||
+        itemHouseType.toLowerCase() === houseType.toLowerCase())
+    );
+  });
 }

@@ -398,38 +398,6 @@ function Sell() {
             </div>
             {/* Break */}
 
-            {/* <div className="photos">
-              <h2>Provide Your Beautiful Images of your Poperty</h2>
-              <label>Enter No.of Photos :</label>
-              <input
-                type="number"
-                placeholder="Enter No.of Photos"
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-
-            {Array.from({ length: nfPhotos }, (_, index) => (
-              <div>
-                <label>Enter Photo number {index + 1} :</label>
-                <input
-                  key={index}
-                  type="url"
-                  placeholder="Enter URL of photo"
-                  onChange={(e) => setLink(e.target.value)}
-                />
-                <button
-                  className="done"
-                  key={index + "11"}
-                  type="button"
-                  onClick={(e) => {
-                    setLinkarr([...linkarr, link]);
-                  }}
-                >
-                  Done
-                </button>
-              </div>
-            ))} */}
-
             <div className="information">
               <label>Discribe additional information :</label>
               <textarea

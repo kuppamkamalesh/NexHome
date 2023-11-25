@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-  width: 24%;
+  width: 30%;
   padding: 20px;
   background-color: #f0f0f0; /* Set your desired background color */
 }
@@ -39,5 +39,5 @@ button {
 }
 
 .property-list {
-  width: 76%;
+  width: 70%;
 }
