@@ -1,0 +1,12 @@
+{
+  "name": "nexhome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm install && npm start",
+    "build": "cd client && npm install && npm run build && cd ../server && npm install"
+  },
+  "author": "",
+  "license": "ISC"
+}
