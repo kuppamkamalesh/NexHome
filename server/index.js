@@ -30,6 +30,9 @@ app.use(cookieParser());
 app.use("/nexHome", nexHomeRouter);
 app.use("/sell", sellRouter);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to NexHome!"); // You can customize this message
+});
 app.listen(4000, () => {
   console.log("started at 4000");
 });
